@@ -1,0 +1,25 @@
+server:
+  port: 5000
+
+spring:
+  datasource:
+    url: jdbc:sqlserver://KMG-GGN-244\SQLEXPRESS:1433;encrypt=true;trustServerCertificate=true;databaseName=inventory
+    username: Admin
+    password:  kmg@2023#$
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    database: sqlserver
+    database-platform: org.hibernate.dialect.SQLServerDialect
+
+inventory:
+   datasource:
+     host: 10.140.206.201
+     port: 1433
+     username: Admin
+     password: kmg@2023#$
+     database: inventory
+
