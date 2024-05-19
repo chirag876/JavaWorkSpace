@@ -1,0 +1,644 @@
+{
+  "openapi": "3.1.0",
+  "comment": "Copyright 2022. ACORD Corporation. All rights reserved.",
+  "info": {
+    "title": "Retrieve Policy",
+    "description": "Need to be able to retrieve a Policy to be able to attach to a claim.",
+    "termsOfService": "https://www.acord.org/terms-of-use",
+    "contact": {
+      "name": "ACORD",
+      "url": "http://www.acord.org",
+      "email": "memberservices@acord.org"
+    },
+    "license": {
+      "name": "ACORD Terms of Use",
+      "url": "https://www.acord.org/terms-of-use"
+    },
+    "version": "1.3.0"
+  },
+  "tags": [
+    {
+      "name": "UC-107 Retrieve Policy"
+    }
+  ],
+  "paths": {
+    "/RetrievePolicy": {
+      "post": {
+        "tags": [
+          "UC-107 Retrieve Policy"
+        ],
+        "requestBody": {
+          "description": "Need to be able to retrieve a Policy to be able to attach to a claim.",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/request"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "item received.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/response_200"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "invalid input.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/response_400"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "additionalInterest": {
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/additionalInterest"
+          },
+          {
+            "$ref": "#/components/schemas/party_2"
+          }
+        ],
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/contact"
+          }
+        }
+      },
+      "address": {
+        "required": [
+          "city",
+          "postalCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/address"
+          }
+        ],
+        "properties": {
+          "detailAddress": {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/detailAddress"
+          }
+        }
+      },
+      "billingInformation": {
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/billingInformation"
+          }
+        ]
+      },
+      "billingSummary": {
+        "required": [
+          "paymentStatusCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/billingSummary"
+          }
+        ],
+        "properties": {
+          "billingInformation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/billingInformation"
+            }
+          }
+        }
+      },
+      "certificate": {
+        "required": [
+          "number",
+          "effectiveDate",
+          "expirationDate"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/certificate"
+          }
+        ]
+      },
+      "coinsurer": {
+        "required": [
+          "sharePercentage"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/coinsurer"
+          },
+          {
+            "$ref": "#/components/schemas/party_1"
+          }
+        ]
+      },
+      "communication": {
+        "required": [
+          "phoneTypeCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/communication"
+          }
+        ]
+      },
+      "contact": {
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/contact"
+          },
+          {
+            "$ref": "#/components/schemas/party_3"
+          }
+        ]
+      },
+      "coverage": {
+        "required": [
+          "id",
+          "typeCode",
+          "effectiveDate",
+          "expirationDate",
+          "categoryCode",
+          "cancellationDate",
+          "inceptionDate",
+          "cancellationReasonCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/coverage"
+          }
+        ],
+        "properties": {
+          "scheduledItem": {
+            "$ref": "#/components/schemas/scheduledItem"
+          },
+          "deductible": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/deductible"
+            }
+          },
+          "limit": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/limit"
+            }
+          }
+        }
+      },
+      "deductible": {
+        "required": [
+          "amount",
+          "typeCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/deductible"
+          }
+        ]
+      },
+      "employee": {
+        "required": [
+          "occupationDescription"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/employee"
+          }
+        ]
+      },
+      "fileInformation": {
+        "required": [
+          "fileName",
+          "typeCode",
+          "versionDate"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/fileInformation"
+          }
+        ],
+        "properties": {
+          "reference": {
+            "$ref": "#/components/schemas/reference"
+          }
+        }
+      },
+      "insured": {
+        "required": [
+          "employee",
+          "typeCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/insured"
+          },
+          {
+            "$ref": "#/components/schemas/party_4"
+          }
+        ],
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/contact"
+          },
+          "employee": {
+            "$ref": "#/components/schemas/employee"
+          }
+        }
+      },
+      "limit": {
+        "required": [
+          "amount",
+          "typeCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/limit"
+          }
+        ]
+      },
+      "messageInformation": {
+        "required": [
+          "businessPurposeTypeCode",
+          "sequnceNumber",
+          "trackingNumber",
+          "sender"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/messageInformation"
+          }
+        ]
+      },
+      "messageInformationResponse": {
+        "required": [
+          "messageStatus"
+        ],
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/messageInformation"
+          }
+        ],
+        "properties": {
+          "messageStatus": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/messageStatus"
+            }
+          }
+        }
+      },
+      "messageStatus": {
+        "required": [
+          "statusCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/messageStatus"
+          }
+        ]
+      },
+      "party_1": {
+        "required": [
+          "fullName"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/party"
+          },
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/nameBase"
+          }
+        ]
+      },
+      "party_2": {
+        "required": [
+          "fullName",
+          "address"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/party"
+          },
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/nameBase"
+          }
+        ],
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/address"
+          }
+        }
+      },
+      "party_3": {
+        "required": [
+          "fullName"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/party"
+          },
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/nameBase"
+          }
+        ],
+        "properties": {
+          "communication": {
+            "$ref": "#/components/schemas/communication"
+          }
+        }
+      },
+      "party_4": {
+        "required": [
+          "address",
+          "birthDate",
+          "communicationPreferenceCode",
+          "fullName"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/party"
+          },
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/person"
+          },
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/nameBase"
+          }
+        ],
+        "properties": {
+          "address": {
+            "$ref": "#/components/schemas/address"
+          }
+        }
+      },
+      "person": {
+        "required": [
+          "birthDate"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/person"
+          }
+        ]
+      },
+      "policy_request": {
+        "required": [
+          "number"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/policy"
+          }
+        ]
+      },
+      "policy_response": {
+        "required": [
+          "number",
+          "currencyCode",
+          "effectiveDate",
+          "expirationDate",
+          "statusCode",
+          "inceptionDate",
+          "lineOfBusinessCode",
+          "campaignCode",
+          "claimReportingTypeCode",
+          "entryDate",
+          "financialSectorCode",
+          "multinationalCode",
+          "product",
+          "coverage",
+          "insured",
+          "certificate",
+          "rate"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/policy"
+          }
+        ],
+        "properties": {
+          "product": {
+            "$ref": "#/components/schemas/product"
+          },
+          "coverage": {
+            "$ref": "#/components/schemas/coverage"
+          },
+          "producer": {
+            "$ref": "#/components/schemas/producer"
+          },
+          "underwriter": {
+            "$ref": "#/components/schemas/underwriter"
+          },
+          "insured": {
+            "$ref": "#/components/schemas/insured"
+          },
+          "reference": {
+            "$ref": "#/components/schemas/reference"
+          },
+          "limit": {
+            "$ref": "#/components/schemas/limit"
+          },
+          "coinsurer": {
+            "$ref": "#/components/schemas/coinsurer"
+          },
+          "fileInformation": {
+            "$ref": "#/components/schemas/fileInformation"
+          },
+          "premium": {
+            "$ref": "#/components/schemas/premium"
+          },
+          "section": {
+            "$ref": "#/components/schemas/section"
+          },
+          "billingSummary": {
+            "$ref": "#/components/schemas/billingSummary"
+          },
+          "additionalInterest": {
+            "$ref": "#/components/schemas/additionalInterest"
+          },
+          "certificate": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/certificate"
+            }
+          },
+          "rate": {
+            "$ref": "#/components/schemas/rate"
+          }
+        }
+      },
+      "premium": {
+        "required": [
+          "paymentStatusCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/premium"
+          }
+        ]
+      },
+      "producer": {
+        "required": [
+          "number",
+          "branch"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/producer"
+          },
+          {
+            "$ref": "#/components/schemas/party_2"
+          }
+        ],
+        "properties": {
+          "contact": {
+            "$ref": "#/components/schemas/contact"
+          }
+        }
+      },
+      "product": {
+        "required": [
+          "productName"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/product"
+          }
+        ]
+      },
+      "rate": {
+        "required": [
+          "classificationCode"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/rate"
+          }
+        ]
+      },
+      "reference": {
+        "required": [
+          "id",
+          "name"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/reference"
+          }
+        ]
+      },
+      "scheduledItem": {
+        "required": [
+          "id",
+          "categoryCode",
+          "description",
+          "effectiveDate",
+          "expirationDate"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/scheduledItem"
+          }
+        ],
+        "properties": {
+          "limit": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/limit"
+            }
+          },
+          "valuation": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/valuation"
+            }
+          }
+        }
+      },
+      "section": {
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/section"
+          }
+        ]
+      },
+      "underwriter": {
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/underwriter"
+          },
+          {
+            "$ref": "#/components/schemas/party_1"
+          }
+        ]
+      },
+      "valuation": {
+        "type": "object",
+        "required": [
+          "amount",
+          "description",
+          "typeCode",
+          "effectiveDate"
+        ],
+        "allOf": [
+          {
+            "$ref": "Retrieve-Policy-Resource-Definitions.json#/components/schemas/valuation"
+          }
+        ]
+      },
+      "request": {
+        "required": [
+          "messageInformation",
+          "policy"
+        ],
+        "properties": {
+          "messageInformation": {
+            "$ref": "#/components/schemas/messageInformation"
+          },
+          "policy": {
+            "$ref": "#/components/schemas/policy_request"
+          }
+        }
+      },
+      "response_200": {
+        "required": [
+          "messageInformation",
+          "policy"
+        ],
+        "properties": {
+          "messageInformation": {
+            "$ref": "#/components/schemas/messageInformationResponse"
+          },
+          "policy": {
+            "$ref": "#/components/schemas/policy_response"
+          }
+        }
+      },
+      "response_400": {
+        "required": [
+          "messageInformation"
+        ],
+        "properties": {
+          "messageInformation": {
+            "$ref": "#/components/schemas/messageInformationResponse"
+          }
+        }
+      }
+    }
+  }
+}
