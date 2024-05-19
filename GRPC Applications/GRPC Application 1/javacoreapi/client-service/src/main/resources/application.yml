@@ -1,0 +1,9 @@
+spring:
+  port: 8085
+
+grpc:
+  client:
+    grpc-acme-service:
+      address: static://localhost:9000
+      negotiationType: plaintext
+
