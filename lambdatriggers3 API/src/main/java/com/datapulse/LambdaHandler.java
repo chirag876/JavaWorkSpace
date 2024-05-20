@@ -19,8 +19,8 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
 public class LambdaHandler implements RequestHandler<S3Event, String> {
-    private static final String DATABRICKS_API_URL = "https://adb-1944762585075355.15.azuredatabricks.net/api/2.0/jobs/run-now";
-    private static final String DATABRICKS_TOKEN = "dapifec0e2a895bba07f937c25f6071272fa-3";
+    private static final String DATABRICKS_API_URL = "";
+    private static final String DATABRICKS_TOKEN = "";
     private static final String JOB_ID = "783293893384398";
 
     @Override
