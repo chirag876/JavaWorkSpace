@@ -21,7 +21,7 @@ import java.nio.charset.StandardCharsets;
 public class LambdaHandler implements RequestHandler<S3Event, String> {
     private static final String DATABRICKS_API_URL = "";
     private static final String DATABRICKS_TOKEN = "";
-    private static final String JOB_ID = "783293893384398";
+    private static final String JOB_ID = "";
 
     @Override
     public String handleRequest(S3Event s3Event, Context context) {
