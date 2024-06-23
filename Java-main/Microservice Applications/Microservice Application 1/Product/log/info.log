@@ -1,0 +1,88 @@
+2023-09-15 17:39:31,980 [INFO ] com.acme.ProductApplication - Starting ProductApplication using Java 20.0.1 with PID 4724 (C:\Workspaces\CodeSpaces\test_Java_Final_Project\Java_Final_Project\Product\target\classes started by Chirag in C:\Workspaces\CodeSpaces\test_Java_Final_Project\Java_Final_Project\Product)
+2023-09-15 17:39:31,984 [INFO ] com.acme.ProductApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-15 17:39:32,901 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-15 17:39:32,903 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-15 17:39:32,939 [INFO ] o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.acme.Repository.ItemRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: jakarta.persistence.Entity, jakarta.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2023-09-15 17:39:32,940 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 0 JPA repository interfaces.
+2023-09-15 17:39:32,967 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-09-15 17:39:32,967 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-09-15 17:39:33,054 [INFO ] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 1 MongoDB repository interfaces.
+2023-09-15 17:39:33,383 [INFO ] o.s.c.context.scope.GenericScope - BeanFactory id=86f9fd8b-69b0-3326-a6e0-92821281eb84
+2023-09-15 17:39:33,956 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-09-15 17:39:33,965 [INFO ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-09-15 17:39:33,968 [INFO ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-15 17:39:33,968 [INFO ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-15 17:39:34,063 [INFO ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-15 17:39:34,064 [INFO ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2003 ms
+2023-09-15 17:39:34,235 [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-15 17:39:34,550 [INFO ] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:61c180d2-c188-487e-8463-9012c7821ef7 user=SA
+2023-09-15 17:39:34,552 [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-15 17:39:34,624 [INFO ] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-15 17:39:34,703 [INFO ] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-15 17:39:34,707 [INFO ] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-09-15 17:39:34,911 [INFO ] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-15 17:39:35,025 [INFO ] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-15 17:39:35,152 [INFO ] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-09-15 17:39:35,300 [INFO ] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-15 17:39:35,303 [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-15 17:39:35,589 [INFO ] org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.9.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/20.0.1+9-29"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@690e4b00, com.mongodb.Jep395RecordCodecProvider@5e3d84a]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-09-15 17:39:35,600 [INFO ] org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=31951800}
+2023-09-15 17:39:36,848 [INFO ] o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration - Eureka HTTP Client uses RestTemplate.
+2023-09-15 17:39:37,077 [INFO ] o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2023-09-15 17:39:37,208 [INFO ] c.netflix.discovery.DiscoveryClient - Initializing Eureka in region us-east-1
+2023-09-15 17:39:37,215 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 17:39:37,245 [INFO ] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2023-09-15 17:39:37,245 [INFO ] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2023-09-15 17:39:37,245 [INFO ] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2023-09-15 17:39:37,245 [INFO ] c.netflix.discovery.DiscoveryClient - Application is null : false
+2023-09-15 17:39:37,245 [INFO ] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2023-09-15 17:39:37,245 [INFO ] c.netflix.discovery.DiscoveryClient - Application version is -1: true
+2023-09-15 17:39:37,245 [INFO ] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2023-09-15 17:39:37,567 [INFO ] c.netflix.discovery.DiscoveryClient - The response status is 200
+2023-09-15 17:39:37,569 [INFO ] c.netflix.discovery.DiscoveryClient - Starting heartbeat executor: renew interval is: 30
+2023-09-15 17:39:37,572 [INFO ] c.n.d.InstanceInfoReplicator - InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-09-15 17:39:37,577 [INFO ] c.netflix.discovery.DiscoveryClient - Discovery Client initialized at timestamp 1694779777577 with initial instances count: 0
+2023-09-15 17:39:37,579 [INFO ] o.s.c.n.e.s.EurekaServiceRegistry - Registering application INVENTORY-SERVICE with eureka with status UP
+2023-09-15 17:39:37,580 [INFO ] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1694779777580, current=UP, previous=STARTING]
+2023-09-15 17:39:37,583 [INFO ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-09-15 17:39:37,583 [INFO ] c.netflix.discovery.DiscoveryClient - DiscoveryClient_INVENTORY-SERVICE/host.docker.internal:Inventory-Service:8081: registering service...
+2023-09-15 17:39:37,606 [INFO ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-09-15 17:39:37,607 [INFO ] o.s.c.n.e.s.EurekaAutoServiceRegistration - Updating port to 8081
+2023-09-15 17:39:37,630 [INFO ] c.netflix.discovery.DiscoveryClient - DiscoveryClient_INVENTORY-SERVICE/host.docker.internal:Inventory-Service:8081 - registration status: 204
+2023-09-15 17:39:37,729 [INFO ] com.acme.ProductApplication - Started ProductApplication in 6.304 seconds (process running for 6.885)
+2023-09-15 17:40:07,571 [INFO ] c.netflix.discovery.DiscoveryClient - Disable delta property : false
+2023-09-15 17:40:07,572 [INFO ] c.netflix.discovery.DiscoveryClient - Single vip registry refresh property : null
+2023-09-15 17:40:07,572 [INFO ] c.netflix.discovery.DiscoveryClient - Force full registry fetch : false
+2023-09-15 17:40:07,572 [INFO ] c.netflix.discovery.DiscoveryClient - Application is null : false
+2023-09-15 17:40:07,573 [INFO ] c.netflix.discovery.DiscoveryClient - Registered Applications size is zero : true
+2023-09-15 17:40:07,573 [INFO ] c.netflix.discovery.DiscoveryClient - Application version is -1: false
+2023-09-15 17:40:07,573 [INFO ] c.netflix.discovery.DiscoveryClient - Getting all instance registry info from the eureka server
+2023-09-15 17:40:07,594 [INFO ] c.netflix.discovery.DiscoveryClient - The response status is 200
+2023-09-15 17:44:37,261 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 17:49:37,276 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 17:54:37,285 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 17:59:37,295 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 18:04:37,312 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 18:09:37,320 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 18:14:37,335 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 18:19:37,339 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 18:24:37,355 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 18:29:37,360 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 19:50:46,945 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 19:55:46,947 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 20:00:46,960 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 20:05:46,967 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 20:10:46,975 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-15 20:15:46,988 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-18 07:30:12,133 [INFO ] c.n.d.s.r.aws.ConfigClusterResolver - Resolving eureka endpoints via configuration
+2023-09-18 07:34:45,052 [INFO ] o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application INVENTORY-SERVICE with eureka with status DOWN
+2023-09-18 07:34:45,052 [INFO ] c.netflix.discovery.DiscoveryClient - Saw local status change event StatusChangeEvent [timestamp=1695002685052, current=DOWN, previous=UP]
+2023-09-18 07:34:45,053 [INFO ] c.netflix.discovery.DiscoveryClient - DiscoveryClient_INVENTORY-SERVICE/host.docker.internal:Inventory-Service:8081: registering service...
+2023-09-18 07:34:45,070 [INFO ] c.netflix.discovery.DiscoveryClient - DiscoveryClient_INVENTORY-SERVICE/host.docker.internal:Inventory-Service:8081 - registration status: 204
+2023-09-18 07:34:45,120 [INFO ] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-18 07:34:45,124 [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-18 07:34:45,127 [INFO ] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-18 07:34:45,129 [INFO ] c.netflix.discovery.DiscoveryClient - Shutting down DiscoveryClient ...
+2023-09-18 07:34:48,144 [INFO ] c.netflix.discovery.DiscoveryClient - Unregistering ...
+2023-09-18 07:34:48,156 [INFO ] c.netflix.discovery.DiscoveryClient - DiscoveryClient_INVENTORY-SERVICE/host.docker.internal:Inventory-Service:8081 - deregister  status: 200
+2023-09-18 07:34:48,167 [INFO ] c.netflix.discovery.DiscoveryClient - Completed shut down of DiscoveryClient

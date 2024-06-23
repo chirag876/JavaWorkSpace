@@ -1,0 +1,125 @@
+<!--<configuration>-->
+<!--    &lt;!&ndash; Define the TRACE level appender &ndash;&gt;-->
+<!--    <appender name="TRACE_FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>logs/trace.log</file>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>log/trace/%d{yyyy-MM-dd}/trace.%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+<!--            <maxHistory>60</maxHistory>-->
+<!--        </rollingPolicy>-->
+<!--        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+<!--            <maxFileSize>1kb</maxFileSize>-->
+<!--        </triggeringPolicy>-->
+<!--        <encoder>-->
+<!--            <pattern>%date{ISO8601} [%-5level] %logger{35} - %msg%n</pattern>&ndash;&gt;-->
+<!--        </encoder>-->
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">&ndash;&gt;-->
+<!--            <level>TRACE</level>-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Define the DEBUG level appender &ndash;&gt;-->
+<!--    <appender name="DEBUG_FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>logs/debug.log</file>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>log/debug/%d{yyyy-MM-dd}/debug.%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+<!--            <maxHistory>60</maxHistory>-->
+<!--        </rollingPolicy>-->
+<!--        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+<!--            <maxFileSize>3kb</maxFileSize>-->
+<!--        </triggeringPolicy>-->
+<!--        <encoder>-->
+<!--            <pattern>%date{ISO8601} [%-5level] %logger{35} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            <level>DEBUG</level>-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Define the INFO level appender &ndash;&gt;-->
+<!--    <appender name="INFO_FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>logs/info.log</file>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>log/info/%d{yyyy-MM-dd}/info.%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+<!--            <maxHistory>60</maxHistory>-->
+<!--        </rollingPolicy>-->
+<!--        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+<!--            <maxFileSize>3kb</maxFileSize>-->
+<!--        </triggeringPolicy>-->
+<!--        <encoder>-->
+<!--            <pattern>%date{ISO8601} [%-5level] %logger{35} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            <level>INFO</level>-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Define the WARN level appender &ndash;&gt;-->
+<!--    <appender name="WARN_FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>logs/warn.log</file>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>log/warn/%d{yyyy-MM-dd}/warn.%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+<!--            <maxHistory>60</maxHistory>-->
+<!--        </rollingPolicy>-->
+<!--        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+<!--            <maxFileSize>3kb</maxFileSize>-->
+<!--        </triggeringPolicy>-->
+<!--        <encoder>-->
+<!--            <pattern>%date{ISO8601} [%-5level] %logger{35} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            <level>WARN</level>-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Define the ERROR level appender &ndash;&gt;-->
+<!--    <appender name="ERROR_FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        <file>logs/error.log</file>-->
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>log/error/%d{yyyy-MM-dd}/error.%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+<!--            <maxHistory>60</maxHistory>-->
+<!--        </rollingPolicy>-->
+<!--        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+<!--            <maxFileSize>3kb</maxFileSize>-->
+<!--        </triggeringPolicy>-->
+<!--        <encoder>-->
+<!--            <pattern>%date{ISO8601} [%-5level] %logger{35} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--        <filter class="ch.qos.logback.classic.filter.LevelFilter">-->
+<!--            <level>ERROR</level>-->
+<!--            <onMatch>ACCEPT</onMatch>-->
+<!--            <onMismatch>DENY</onMismatch>-->
+<!--        </filter>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Define a console appender &ndash;&gt;-->
+<!--    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">-->
+<!--        <encoder>-->
+<!--            <pattern>%date{ISO8601} [%-5level] %logger{35} - %msg%n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+<!--    &lt;!&ndash; Root logger configuration &ndash;&gt;-->
+<!--    <root level="INFO">-->
+<!--        &lt;!&ndash; Additivity false for TRACE level &ndash;&gt;-->
+<!--        <appender-ref ref="TRACE_FILE"/>-->
+<!--        <appender-ref ref="DEBUG_FILE"/>-->
+<!--        <appender-ref ref="INFO_FILE"/>-->
+<!--        <appender-ref ref="WARN_FILE"/>-->
+<!--        <appender-ref ref="ERROR_FILE"/>-->
+<!--        <appender-ref ref="CONSOLE"/> &lt;!&ndash; Add the console appender &ndash;&gt;-->
+<!--    </root>-->
+
+<!--    &lt;!&ndash; Logger configuration for TRACE level &ndash;&gt;-->
+<!--    <logger name="com.acme" level="TRACE">-->
+<!--        <appender-ref ref="CONSOLE"/> &lt;!&ndash; Add the console appender for TRACE level &ndash;&gt;-->
+<!--    </logger>-->
+
+<!--</configuration>-->

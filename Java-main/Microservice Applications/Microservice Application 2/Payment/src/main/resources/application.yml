@@ -1,0 +1,17 @@
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: pkc-56d1g.eastus.azure.confluent.cloud:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.acme.*
+  application:
+    name: Payment-API
+eureka:
+  instance:
+    hostname: localhost
+

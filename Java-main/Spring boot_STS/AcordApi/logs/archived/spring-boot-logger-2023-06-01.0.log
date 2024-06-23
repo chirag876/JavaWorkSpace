@@ -1,0 +1,48 @@
+2023-06-01 11:20:14,642 INFO org.springframework.boot.StartupInfoLogger [main] Starting AcordApiApplication using Java 20.0.1 on DESKTOP-JML8PE9 with PID 9680 (C:\Users\HP\Downloads\AcordApi\target\classes started by HP in C:\Users\HP\Downloads\AcordApi)
+2023-06-01 11:20:14,659 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.4, Spring v5.3.9
+2023-06-01 11:20:14,665 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2023-06-01 11:20:19,872 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-01 11:20:20,125 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 229 ms. Found 4 JPA repository interfaces.
+2023-06-01 11:20:21,932 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8096 (http)
+2023-06-01 11:20:21,956 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8096"]
+2023-06-01 11:20:21,958 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-06-01 11:20:21,959 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.52]
+2023-06-01 11:20:22,344 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-06-01 11:20:22,347 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7492 ms
+2023-06-01 11:20:23,047 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-01 11:20:23,305 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.32.Final
+2023-06-01 11:20:23,818 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-06-01 11:20:24,150 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2023-06-01 11:20:24,916 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-06-01 11:20:24,959 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-06-01 11:20:27,976 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-01 11:20:28,005 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-01 11:20:30,351 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-01 11:20:30,829 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-06-01 11:20:30,998 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [main] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-01 11:20:34,844 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8096"]
+2023-06-01 11:20:34,999 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8096 (http) with context path ''
+2023-06-01 11:20:35,003 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Context refreshed
+2023-06-01 11:20:35,095 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [main] Found 1 custom documentation plugin(s)
+2023-06-01 11:20:35,222 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [main] Scanning for api listing references
+2023-06-01 11:20:35,698 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: CreateUsingPOST_1
+2023-06-01 11:20:35,751 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: GetListUsingGET_1
+2023-06-01 11:20:35,779 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: UpdateUsingPUT_1
+2023-06-01 11:20:35,786 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: deleteContactUsingDELETE_1
+2023-06-01 11:20:35,840 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: CreateUsingPOST_2
+2023-06-01 11:20:35,876 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: GetListUsingGET_2
+2023-06-01 11:20:35,900 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: UpdateUsingPUT_2
+2023-06-01 11:20:35,996 INFO springfox.documentation.spring.web.readers.operation.CachingOperationNameGenerator [main] Generating unique operation named: deleteContactUsingDELETE_2
+2023-06-01 11:20:36,101 INFO org.springframework.boot.StartupInfoLogger [main] Started AcordApiApplication in 23.577 seconds (JVM running for 30.09)
+2023-06-01 11:21:08,888 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8096-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-01 11:21:08,891 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8096-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-06-01 11:21:08,902 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8096-exec-1] Completed initialization in 11 ms
+2023-06-01 11:21:11,316 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8096-exec-3] Init duration for springdoc-openapi is: 1784 ms
+2023-06-01 11:23:02,706 TRACE com.AcordApi.Infrastructure.DataAccess.PolicyDataAccess [http-nio-8096-exec-7] PolicyDataAccess.AddPolicy - In process
+2023-06-01 11:23:03,856 INFO com.AcordApi.Infrastructure.Services.DomainEventService [http-nio-8096-exec-7] Publishing domain event. Event -[com.AcordApi.Application.Domain.Events.Policy.PolicyCreatedEvent@2cae8935]
+2023-06-01 11:23:03,870 INFO com.AcordApi.Application.Common.Model.DomainEventNotification [http-nio-8096-exec-7] DomainEventNotification in process
+2023-06-01 11:23:35,650 TRACE com.AcordApi.Infrastructure.DataAccess.PolicyDataAccess [http-nio-8096-exec-9] PolicyDataAccess.GetAll - In process
+2023-06-01 11:26:16,075 TRACE com.AcordApi.Infrastructure.DataAccess.PolicyDataAccess [http-nio-8096-exec-3] PolicyDataAccess.GetAll - In process
+2023-06-01 12:59:06,239 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-01 12:59:10,518 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-06-01 12:59:12,733 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.

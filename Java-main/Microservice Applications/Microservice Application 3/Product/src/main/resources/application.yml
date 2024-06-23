@@ -1,0 +1,13 @@
+spring:
+#  kafka:
+#    producer:
+#      binder:
+#        brokers: pkc-56d1g.eastus.azure.confluent.cloud:9092
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer:  org.springframework.kafka.support.serializer.JsonSerializer
+  application:
+    name: Inventory-Service
+
+eureka:
+  instance:
+    hostname: localhost

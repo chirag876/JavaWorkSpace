@@ -1,0 +1,5 @@
+"id","customerId","customerName","lineOfBusinessCode","totalPremium","effectiveDate","cancellationDate","expirationDate","RenewalDate","renewalPremium","numberOfEmployees","businessIndustry","annualRevenue","paymentMethod","claimsCount","claimAmount","durationInMonths","RenewalStatus"
+"1003","3","Tyler Davis","GL","7587.95","2020-03-31","","2021-03-31","2021-04-01","7870.94","7","Construction","496585.28","ACH Transfer","0","7087.95","12",""
+"1007","7","Pamela Lee","GL","1522.75","2020-07-31","2020-11-27","2021-07-31","","1552.03","16","Manufacturing","9093502.06","ACH Transfer","1","1022.75","12",""
+"1001","1","Catherine Scott","GL","4370.86","2020-01-31","2021-01-14","2021-01-31","","4233.24","57","Construction","4912691.8","ACH Transfer","1","3870.86","12",""
+"7789","1","Catherine Scott","GL","4370.86","2020-01-31","2021-01-14","2021-01-31","","4233.24","57","Construction","4912691.8","ACH Transfer","1","3870.86","12",""

@@ -1,0 +1,11 @@
+2023-09-18 12:37:51,650 [WARN ] r.n.http.client.HttpClientConnect - [be92b504-1, L:/127.0.0.1:55840 ! R:localhost/127.0.0.1:8080] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-09-18 14:37:11,551 [WARN ] r.n.http.client.HttpClientConnect - [e318dbb5-1, L:/127.0.0.1:59052 ! R:localhost/127.0.0.1:8080] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-09-18 14:40:47,724 [WARN ] r.n.http.client.HttpClientConnect - [10b6c0aa-1, L:/127.0.0.1:59162 ! R:localhost/127.0.0.1:8080] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-09-18 14:42:31,775 [WARN ] r.n.http.client.HttpClientConnect - [64b9b7fb-1, L:/127.0.0.1:59218 ! R:localhost/127.0.0.1:8080] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-09-18 14:45:02,535 [WARN ] r.n.http.client.HttpClientConnect - [124a2297-1, L:/127.0.0.1:59296 ! R:localhost/127.0.0.1:8080] The connection observed an error
+reactor.netty.http.client.PrematureCloseException: Connection prematurely closed BEFORE response
+2023-09-19 10:44:17,787 [WARN ] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]

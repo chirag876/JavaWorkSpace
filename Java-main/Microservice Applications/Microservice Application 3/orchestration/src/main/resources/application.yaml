@@ -1,0 +1,4 @@
+service:
+  endpoints:
+    order: http://localhost:8080/
+    payment: http://localhost:8084/
